@@ -1,0 +1,41 @@
+/* Definición de Variables CSS */
+:root {
+    /* Color de fondo oscuro basado en el color de Bootstrap dark */
+    --color-fondo-oscuro: #212529; 
+    /* Fuente personalizada: Jura (Google Fonts) */
+    --font-footer: 'Jura', sans-serif;
+}
+
+/* Estilo de la etiqueta footer: usa la variable de color */
+footer {
+    /* Usamos la variable definida. !important se puede omitir si se usa 
+       el selector 'footer' y no se usan clases de Bootstrap que lo sobrescriban. 
+       Aquí lo usamos para ser 100% seguros. */
+    background-color: var(--color-fondo-oscuro) !important; 
+    padding: 15px 0;
+}
+
+/* Estilo del texto del footer: ahora con la clase CSS */
+footer p.footer__texto {
+    color: white; 
+    font-family: var(--font-footer); /* Uso de la variable Jura */
+    text-align: center;
+    margin: 0; 
+    font-size: 0.9em;
+}
+
+/* Estilos Generales (Opcional, para mejorar la apariencia) */
+header {
+    background-color: #007bff !important; /* Color azul primario de Bootstrap */
+}
+
+/* Asegura que el footer se mantenga al final si el contenido es corto */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+}
